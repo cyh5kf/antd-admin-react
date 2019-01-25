@@ -244,9 +244,14 @@ export function getLocale() {
 }
 
 export function setLocale(language) {
-  if (getLocale() !== language) {
+  const local = getLocale();
+  if (local !== language) {
+    let hash = window.location.hash
+    let index=hash.lastIndexOf(local);
+    hash=hash.substring(index+2,hash.length);
     umiRouter.push({
-      pathname: `/${language}${deLangPrefix(window.location.pathname)}`,
+      pathname: `/${language}${deLangPrefix(hash)}`,
+      // pathname: `/${language}${deLangPrefix(window.location.pathname)}`,
       search: window.location.search,
     })
   }

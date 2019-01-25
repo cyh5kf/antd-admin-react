@@ -1,5 +1,5 @@
 module.exports = {
-  siteName: 'AntD Admin',
+  siteName: '美创数据分析平台',
   copyright: 'Ant Design Admin  © 2018 zuiidea',
   logoPath: '/logo.svg',
   apiPrefix: '/api/v1',
@@ -29,6 +29,6 @@ module.exports = {
         flag: '/china.svg',
       },
     ],
-    defaultLanguage: 'en',
+    defaultLanguage: 'zh',
   },
 }

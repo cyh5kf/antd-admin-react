@@ -22,9 +22,9 @@ export default {
       {
         id: '1',
         icon: 'laptop',
-        name: 'Dashboard',
+        name: 'User',
         zhName: '仪表盘',
-        router: '/dashboard',
+        router: '/user',
       },
     ],
     locationPathname: '',
@@ -108,7 +108,7 @@ export default {
         })
         if (pathMatchRegexp(['/','/login'], window.location.pathname)) {
           router.push({
-            pathname: '/dashboard',
+            pathname: '/user',
           })
         }
       } else if (queryLayout(config.layouts, locationPathname) !== 'public') {
@@ -133,9 +133,9 @@ export default {
               {
                 id: '1',
                 icon: 'laptop',
-                name: 'Dashboard',
+                name: 'User',
                 zhName: '仪表盘',
-                router: '/dashboard',
+                router: '/user',
               },
             ],
           },

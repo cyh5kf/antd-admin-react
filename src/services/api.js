@@ -11,8 +11,4 @@ export default {
   createUser: 'POST /user',
   removeUser: 'DELETE /user/:id',
   removeUserList: 'POST /users/delete',
-
-  queryPostList: '/posts',
-
-  queryDashboard: '/dashboard',
 }

@@ -79,6 +79,12 @@ export default {
       pathRewrite: { '^/api/v1/weather': '/v3/weather' },
     },
   },
+  // proxy: {
+  //   '/DAP': {
+  //     target: 'http://192.168.241.138:8001/',
+  //     changeOrigin: true,
+  //   },
+  // },
   alias: {
     api: resolve(__dirname, './src/services/'),
     components: resolve(__dirname, './src/components'),
