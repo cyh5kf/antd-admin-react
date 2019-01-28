@@ -122,15 +122,16 @@ const routerAddLangPrefix = params => {
  */
 const myRouter = { ...umiRouter }
 
-myRouter.push = flow(
-  routerAddLangPrefix,
-  umiRouter.push
-)
+//打开注释，则可以切换语言
+// myRouter.push = flow(
+//   routerAddLangPrefix,
+//   umiRouter.push
+// )
 
-myRouter.replace = flow(
-  routerAddLangPrefix,
-  myRouter.replace
-)
+// myRouter.replace = flow(
+//   routerAddLangPrefix,
+//   myRouter.replace
+// )
 
 export const router = myRouter
 
@@ -250,7 +251,7 @@ export function setLocale(language) {
     let index=hash.lastIndexOf(local);
     hash=hash.substring(index+2,hash.length);
     umiRouter.push({
-      pathname: `/${language}${deLangPrefix(hash)}`,
+      pathname: `${deLangPrefix(hash)}`,
       // pathname: `/${language}${deLangPrefix(window.location.pathname)}`,
       search: window.location.search,
     })
